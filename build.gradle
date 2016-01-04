@@ -31,7 +31,7 @@ plugins {
 
 description = 'A swagger-ui mod that supports rfc6570 compliant urls'
 group = 'io.springfox'
-version = '0.9.2'
+version = '0.9.3'
 
 
 apply plugin: 'java'
@@ -97,7 +97,7 @@ jar {
   }
 
   from("${buildDir}/${swaggerUiExplodedDir}") {
-    into "META-INF/resources/webjars/${project.name}"
+    into "META-INF/resources/webjars/springfox-swagger-ui"
     manifest {
       attributes(
           'Built-By': 'Dilip Krishnan',
