@@ -80,6 +80,16 @@ task removeHtmlIndex(type: Delete) {
   delete "${buildDir}/${swaggerUiExplodedDir}/swagger-ui.js"
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+  classifier = 'sources'
+  from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+  classifier = 'javadoc'
+  from javadoc.destinationDir
+}
+
 jar {
 
   from("${projectDir}/src/web/swagger-ui.html") {

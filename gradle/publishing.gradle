@@ -76,6 +76,8 @@ publishing {
           d.appendNode('name', it.value)
         }
       }
+      artifact sourcesJar
+      artifact javadocJar
     }
   }
 }
