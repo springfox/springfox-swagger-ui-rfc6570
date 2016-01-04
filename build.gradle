@@ -31,7 +31,7 @@ plugins {
 
 description = 'A swagger-ui mod that supports rfc6570 compliant urls'
 group = 'io.springfox'
-version = '0.9.0'
+version = '0.9.1'
 
 
 apply plugin: 'java'
