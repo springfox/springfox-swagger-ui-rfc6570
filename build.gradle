@@ -31,7 +31,7 @@ plugins {
 
 description = 'A swagger-ui mod that supports rfc6570 compliant urls'
 group = 'io.springfox'
-version = '0.9.5-SNAPSHOT'
+version = '0.9.5'
 
 
 apply plugin: 'java'
@@ -41,7 +41,7 @@ apply plugin: 'com.jfrog.bintray'
 apply from: 'gradle/publishing.gradle'
 
 ext {
-  swaggerUiVersion = '2.1.4-rfc6570'
+  swaggerUiVersion = '2.1.4.1-rfc6570'
   swaggerUiDist = "build/libs/swagger-ui-dist.zip"
   swaggerUiExplodedDir = "swagger-ui-${swaggerUiVersion}/dist/"
   downloadUrl = "https://github.com/dilipkrish/swagger-ui/archive/v${swaggerUiVersion}.zip"
