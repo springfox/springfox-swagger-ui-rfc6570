@@ -19,13 +19,17 @@ bintray {
   publish = true //If version should be auto published after an upload
   publications = ['mavenJava']
   pkg {
-    repo = 'maven'
-    name = 'springfox-swagger-ui-rfc6570'
+    repo = 'maven-repo'
+    userOrg = 'springfox' //An optional organization name when the repo belongs to one of the user's orgs
+    name = 'springfox-swagger-ui'
     websiteUrl = 'https://github.com/springfox/springfox-swagger-ui-rfc6570'
     issueTrackerUrl = 'https://github.com/springfox/springfox-swagger-ui-rfc6570/issues'
     vcsUrl = 'https://github.com/springfox/springfox-swagger-ui-rfc6570/springfox-swagger-ui-rfc6570.git'
     desc = 'A swagger-ui mod that supports rfc6570 compliant urls'
     licenses = ['Apache-2.0']
+    labels = ['spring', 'swagger', 'apis', 'swagger-ui']
+    publicDownloadNumbers = true
+
     version {
       vcsTag = project.version
       gpg {
