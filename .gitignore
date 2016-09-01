@@ -13,3 +13,5 @@ hs_err_pid*
 build
 .gradle
 .DS_Store
+.idea/
+springfox-swagger-ui.iml
