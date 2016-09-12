@@ -41,7 +41,7 @@ apply plugin: 'com.jfrog.bintray'
 apply from: 'gradle/publishing.gradle'
 
 ext {
-  swaggerUiVersion = '2.2.2-rfc6570'
+  swaggerUiVersion = '2.2.3-rfc6570'
   swaggerUiDist = "build/libs/swagger-ui-dist.zip"
   swaggerUiExplodedDir = "swagger-ui-${swaggerUiVersion}/dist/"
   downloadUrl = "https://github.com/dilipkrish/swagger-ui/archive/v${swaggerUiVersion}.zip"
