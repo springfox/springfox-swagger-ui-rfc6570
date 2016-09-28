@@ -22,7 +22,7 @@ $(function() {
     window.swaggerUi = new SwaggerUi({
       dom_id: "swagger-ui-container",
       validatorUrl: data.validatorUrl,
-      supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+      supportedSubmitMethods: data.supportedSubmitMethods || ['get', 'post', 'put', 'delete', 'patch'],
       onComplete: function(swaggerApi, swaggerUi) {
 
         initializeSpringfox();
@@ -40,7 +40,7 @@ $(function() {
         log("Unable to Load SwaggerUI");
       },
       docExpansion: data.docExpansion || 'none',
-      jsonEditor: data.jsonEditor || false,
+      jsonEditor: JSON.parse(data.jsonEditor) || false,
       apisSorter: data.apisSorter || 'alpha',
       defaultModelRendering: data.defaultModelRendering || 'schema',
       showRequestHeaders: data.showRequestHeaders || true
@@ -49,7 +49,7 @@ $(function() {
     initializeBaseUrl();
 
     function addApiKeyAuthorization() {
-      var key = encodeURIComponent($('#input_apiKey')[0].value);
+      var key = (window.apiKeyVehicle == 'query') ? encodeURIComponent($('#input_apiKey')[0].value) : $('#input_apiKey')[0].value;
       if (key && key.trim() != "") {
         var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization(window.apiKeyName, key, window.apiKeyVehicle);
         window.swaggerUi.api.clientAuthorizations.add(window.apiKeyName, apiKeyAuth);
