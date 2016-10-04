@@ -16,3 +16,9 @@ The swagger ui version is specified in ./build.gradle where `swaggerUiVersion` i
 
 By default Spring Boot has sensible defaults for serving content from webjars. To configure vanilla spring web mvc apps to serve
  webjar content see the [webjar documentation] (http://www.webjars.org/documentation#springmvc) 
+
+##### Releasing swagger-ui
+
+```bash
+./gradlew clean build bintrayUpload -PbintrayUsername=<user> -PbintrayApiKey=<key> -PossUser=<sonatype-user> -PossPassword=<sonatype-pwd>
+```
